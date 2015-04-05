@@ -1,0 +1,2 @@
+# openscam-web
+OpenSCAM Website
