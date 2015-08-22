@@ -1,2 +1,2 @@
-# openscam-web
-OpenSCAM Website
+# camotics-web
+CAMotics Website

@@ -2,20 +2,20 @@
     pages: {
         main: {
             titleText:
-            '<div><img src="images/banner.png" alt="OpenSCAM"/></div>',
+            '<div><img src="images/banner.png" alt="CAMotics"/></div>',
             subtext: 'Open-Source Simulation & Computer Aided Machining',
         },
         download: {
             titleText: "<h1>Downloads</h1>",
-            subtext: 'OpenSCAM installers and packages.',
+            subtext: 'CAMotics installers and packages.',
         },
         manual: {
             titleText: "<h1>User's Manual</h1>",
-            subtext: 'A guide to using OpenSCAM v0.2.5 or newer.',
+            subtext: 'A guide to using CAMotics v0.2.5 or newer.',
         }
     },
     version: '0.2.5 beta',
-    repoURL: 'https://github.com/CauldronDevelopmentLLC/OpenSCAM',
+    repoURL: 'https://github.com/CauldronDevelopmentLLC/CAMotics',
     releases: [
         ['Windows', ['windows-128.png'],
          'windows-xp-32bit', 'openscam_0.2.5_x86.exe'],

@@ -7,4 +7,4 @@ clean:
 	rm -rf http jade/{manual,main,download}/{template,menu}.jade
 
 publish: http
-	rsync -Lav http/ root@openscam.org:/var/www/openscam.org/http/
+	rsync -Lav http/ root@camotics.org:/var/www/camotics.org/http/

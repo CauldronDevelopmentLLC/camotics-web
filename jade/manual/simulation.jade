@@ -33,7 +33,7 @@ h2#simulation-resolution Adjusting the Resolution
 img(src='images/manual/resolution.png')
 p
   | The simulator can run at different resolutions.  Higher resolutions
-  | improve accuracy but increase simulation time.  OpenSCAM automatically
+  | improve accuracy but increase simulation time.  CAMotics automatically
   | chooses a simulation resolution based on the workpiece volume.
   | You can select a higher or lower resolution using the resolution
   | combobox.
@@ -41,7 +41,7 @@ p
   | It is also possible to manually set the resolution by editing the
   | resolution spinbox.  The resolution value specifies the size of the
   | simulation grid in millimeters.  For example, if your workpiece is
-  | 100x100x10 mm and you select a resolution of 0.1 mm then OpenSCAM will
+  | 100x100x10 mm and you select a resolution of 0.1 mm then CAMotics will
   | probe 100,000,000 points in 3D space.  As the simulation value decreases,
   | simulation complexity increases exponentially so don't choose resolution
   | values which are too small.
@@ -84,7 +84,7 @@ p
 h2#simulation-partial Partial Simulations
 img(src='images/manual/playback-position.png')
 p
-  | Although OpenSCAM is not yet able to show you the cutting process in
+  | Although CAMotics is not yet able to show you the cutting process in
   | real-time (
   +issue(2)
   | ), it is possible to view the cut workpiece at any point in time by

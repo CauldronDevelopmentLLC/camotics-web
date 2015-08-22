@@ -12,21 +12,21 @@ pre
 
     # Get the source
     git clone https://github.com/CauldronDevelopmentLLC/cbang
-    git clone https://github.com/CauldronDevelopmentLLC/OpenSCAM
+    git clone https://github.com/CauldronDevelopmentLLC/CAMotics
 
     # Build C!
     scons -C cbang
     export CBANG_HOME=$PWD/cbang
 
-    # Build OpenSCAM
-    cd OpenSCAM
+    # Build CAMotics
+    cd CAMotics
     scons
 
     # Build the package
     scons package
 
     # Install the package
-    sudo dpkg -i openscam_*.deb
+    sudo dpkg -i camotics_*.deb
 
 p
   | Visit the&nbsp;
