@@ -4,7 +4,7 @@ mixin issue(n)
 
 
 mixin do_release(r, release, mode)
-  - var url = 'http://openscam.org/releases/' + release + '/' + mode;
+  - var url = 'http://camotics.org/releases/' + release + '/' + mode;
   - url += '/openscam/' + r[2] + '/v0.2/' + r[3];
   .release(title='Download CAMotics for ' + r[0])
     each img in r[1]
