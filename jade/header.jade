@@ -42,20 +42,21 @@ header.navbar.navbar-inverse.navbar-fixed-top.docs-nav(role='banner')
     != pages[page].titleText
     != pages[page].subtext
 
+.banner#release20151014
+  img.banner-close(src='images/banner-close.png')
+  .container
+    p
+      | CAMotics 1.0.2 released.  See the <a
+      | href="#{repoURL}/blob/master/CHANGELOG.md"
+      | >change log</a> for more information about the new version.
+
 .banner#name20150822
   img.banner-close(src='images/banner-close.png')
   .container
     p ANNOUNCEMENT: We changed our name from OpenSCAM to CAMotics.
 
-    //- url = "https://github.com/CauldronDevelopmentLLC/CAMotics/";
     //| Help promote CAMotics.&nbsp;
-    //a(href=url) Go to GitHub
+    //a(href=repoURL) Go to GitHub
     //| &nbsp;and click the&nbsp;
-    //a(href=url): img(src="images/github-star.png")
+    //a(href=repoURL): img(src="images/github-star.png")
     //| &nbsp;button!
-
-    //= 'CAMotics version ' + version + ' has been released -'
-    //| &nbsp;
-    //strong
-    //  a(href=repoURL + '/blob/master/CHANGELOG.md', target='_blank')
-    //    | See what's new.

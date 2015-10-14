@@ -86,15 +86,17 @@ $(function() {
     .appendTo('.github-fork');
 
   // Banner
-  var banner = $('.banner');
-  var bannerID = banner.attr('id');
+  $('.banner').each(function (index, _banner) {
+    var banner = $(_banner);
+    var bannerID = banner.attr('id');
 
-  if (document.cookie.indexOf('banner-close=' + bannerID) == -1)
-    banner.slideDown('fast');
+    if (document.cookie.indexOf('banner-close-' + bannerID + '=true') == -1)
+      banner.slideDown('fast');
 
-  $('.banner-close').click(function () {
-    banner.slideUp('fast');
-    document.cookie = 'banner-close=' + bannerID + '; path=/';
+    banner.find('.banner-close').click(function () {
+      $(banner).slideUp('fast');
+      document.cookie = 'banner-close-' + bannerID + '=true; path=/';
+    });
   });
 
   // Google Analytics

@@ -14,18 +14,18 @@
             subtext: 'A guide to using CAMotics v0.2.5 or newer.',
         }
     },
-    version: '0.2.5 beta',
+    version: '1.0.2',
     repoURL: 'https://github.com/CauldronDevelopmentLLC/CAMotics',
     releases: [
         ['Windows', ['windows-128.png'],
-         'windows-xp-32bit', 'openscam_0.2.5_x86.exe'],
-        ['Mac OS-X', ['osx-128.png'],
-         'osx-10.6.4-64bit', 'openscam_0.2.5_x86_64.pkg'],
+         'windows-xp-32bit', 'camotics_1.0.2_x86.exe'],
         ['Debian Linux 64-bit', ['debian-128.png', 'mint-128.png'],
-         'debian-testing-64bit', 'openscam_0.2.5_amd64.deb'],
+         'debian-testing-64bit', 'camotics_1.0.2_amd64.deb'],
         ['Debian Linux 32-bit', ['debian-128.png', 'mint-128.png'],
-         'debian-testing-32bit', 'openscam_0.2.5_i386.deb'],
-        ['LinuxCNC 10.04', ['ubuntu-128.png'],
-         'linuxcnc-10.04-32bit', 'openscam_0.2.5_i386.deb']
+         'debian-testing-32bit', 'camotics_1.0.2_i386.deb'],
+        ['Ubuntu Precise 64-bit', ['ubuntu-128.png'],
+         'ubuntu-precise-64bit', 'camotics_1.0.2_amd64.deb'],
+        ['Mac OS-X', ['osx-128.png'],
+         'osx-10.6.4-64bit', 'camotics_1.0.2_x86_64.pkg']
     ]
 }
