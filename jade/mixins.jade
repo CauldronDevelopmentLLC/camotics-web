@@ -5,7 +5,7 @@ mixin issue(n)
 
 mixin do_release(r, release, mode)
   - var url = 'http://camotics.org/releases/' + release + '/' + mode;
-  - url += '/camotics/' + r[2] + '/v1.0/' + r[3];
+  - url += '/camotics/' + r[2] + '/v1.1/' + r[3];
   .release(title='Download CAMotics for ' + r[0])
     each img in r[1]
       img(src='images/' + img, alt=r[0])

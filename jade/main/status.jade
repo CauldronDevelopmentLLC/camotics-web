@@ -21,12 +21,13 @@ ul
   li Fast 3-axis cut-workpiece simulation with 3D visualization.
   li Simulates cylindrical, conical, ballnose, spheroid and snubnose tool
     | shapes.
-  li Tool path 3D visualization. 
+  li Tool path 3D visualization.
   li Multi-threaded rendering can take advantage of multi-processor CPUs.
   li GCode parsing, simulation, verification and annotation.
+  li In application G-Code and <a href="tplang.org">TPL</a> view and edit.
   li Supports LinuxCNC (AKA EMC2) O-codes.
   li Export cut workpiece to STL file.
-  li Tool table editing. 
+  li Tool table editing.
   li Add height probing to 2D GCode files.  Very useful for circuit board
     | cutting and metal engraving.
   li 2D GCode path optimization. (in progress
@@ -95,22 +96,19 @@ p
   | of this depends on the availability of developer time and funding.
 p Here are some of the current ideas:
   ul
-    li Real-time cutting simulation.
-    li Rotational axis simulation.
+    li Faster real-time cutting simulation.
+    li Rotational 4th axis simulation.
     li 5-axis simulation.
     li Lathe simulation.
     li Tool collision detection.
     li Fixture collision detection.
     li Simulate cutting multiple sides of a workpiece.
     li Feed and speed calculator.
-    li Simulation result caching.
     li Machine description: speeds, dimensions, axes, etc.
     li CNC remote control.
-    li In application G-Code view and edit.
     li Workpiece view slicing.
     li Multiple workpieces.
     li Composite tools.
-    li Tool library.
     li 3D printer simulation.
     li CAM routines: pocketing, offsetting, arrays, etc.
     li Font V-Carving.

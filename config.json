@@ -14,18 +14,18 @@
             subtext: 'A guide to using CAMotics v0.2.5 or newer.',
         }
     },
-    version: '1.0.2',
+    version: '1.1.1',
     repoURL: 'https://github.com/CauldronDevelopmentLLC/CAMotics',
     releases: [
-        ['Windows', ['windows-128.png'],
-         'windows-xp-32bit', 'camotics_1.0.2_x86.exe'],
+        ['Windows 64-bit', ['windows-128.png'],
+         'windows-10-64bit', 'camotics_1.1.1_AMD64.exe'],
+        ['Windows 32-bit', ['windows-128.png'],
+         'windows-10-32bit', 'camotics_1.1.1_x86.exe'],
         ['Debian Linux 64-bit', ['debian-128.png', 'mint-128.png'],
-         'debian-testing-64bit', 'camotics_1.0.2_amd64.deb'],
+         'debian-stable-64bit', 'camotics_1.1.1_amd64.deb'],
         ['Debian Linux 32-bit', ['debian-128.png', 'mint-128.png'],
-         'debian-testing-32bit', 'camotics_1.0.2_i386.deb'],
-        ['Ubuntu Precise 64-bit', ['ubuntu-128.png'],
-         'ubuntu-precise-64bit', 'camotics_1.0.2_amd64.deb'],
+         'debian-stable-32bit', 'camotics_1.1.1_i386.deb'],
         ['Mac OS-X', ['osx-128.png'],
-         'osx-10.6.4-64bit', 'camotics_1.0.2_x86_64.pkg']
+         'osx-10.11.6-64bit', 'camotics_1.1.1_x86_64.pkg']
     ]
 }

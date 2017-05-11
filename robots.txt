@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /
+
+User-agent: GoogleBot
+Allow: *
+Disallow: /releases/*
+
+User-agent: MSNBot
+Allow: *
+Disallow: /releases/*
+
+User-agent: BingBot
+Allow: *
+Disallow: /releases/*
+
+User-agent: Slurp
+Allow: *
+Disallow: /releases/*
+
+User-agent: Teoma
+Allow: *
+Disallow: /releases/*
+
+User-agent: YandexBot
+Allow: *
+Disallow: /releases/*
