@@ -5,10 +5,9 @@ p You can build from source in Debian Linux with the following commands:
 pre
   code.
     # Install the prerequisites
-    sudo apt-get install scons build-essential libbz2-dev zlib1g-dev \
-      libexpat1-dev libssl-dev libboost-iostreams-dev libboost-system-dev \
-      libboost-filesystem-dev libboost-regex-dev libsqlite3-dev libv8-dev \
-      qt4-dev-tools libqt4-dev libqt4-opengl-dev libcairo2-dev git
+    sudo apt-get update
+    sudo apt-get -y install scons build-essential libssl-dev qt5-default \
+      libqt5websockets5-dev libqt5opengl5-dev libv8-dev git
 
     # Get the source
     git clone https://github.com/CauldronDevelopmentLLC/cbang

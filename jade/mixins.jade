@@ -16,3 +16,17 @@ mixin do_release(r, release, mode)
 mixin do_releases(rs, release, mode)
   each r in rs
     +do_release(r, release, mode)
+
+
+mixin mc_signup()
+  #mc_embed_signup
+    form(action="//buildbotics.us16.list-manage.com/subscribe/post",
+      method="post")
+
+      h3 Subscribe to the Buildbotics mailing list
+
+      label Email:
+      input(type="email", name="EMAIL")
+      input.button(type="submit", value="Subscribe")
+      input(type="hidden", name="u", value="aa50c8cda80a6ed2405c3e499")
+      input(type="hidden", name="id", value="d319ecab7c")
