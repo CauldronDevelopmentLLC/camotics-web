@@ -1,5 +1,7 @@
 #!/bin/bash
 
+JADE="$(dirname "$0")"/node_modules/jade/bin/jade.js
+
 declare -A PAGES
 
 PAGES[main]="about quick-start mission screenshots status donate community "
@@ -26,10 +28,10 @@ for PAGE in ${!PAGES[@]}; do
     TEMPLATE=jade/$PAGE/template.jade
     TARGET=http/$PAGE.html
     echo Building $TARGET from $TEMPLATE...
-	jade -P -p $TEMPLATE -O "$(cat config.json)" <$TEMPLATE >$TARGET
+	$JADE -P -p $TEMPLATE -O "$(cat config.json)" <$TEMPLATE >$TARGET
 done
 
-jade -P <jade/notfound.jade >http/notfound.html
+$JADE -P <jade/notfound.jade >http/notfound.html
 
 ln -sf main.html http/index.html
 ln -sf ../css ../js ../images http/

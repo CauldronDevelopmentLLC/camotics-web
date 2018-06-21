@@ -3,7 +3,7 @@ include mixins
 header.navbar.navbar-inverse.navbar-fixed-top.docs-nav(role='banner')
   a#ribbon(title='Click here to learn how you can support this project.',
     href='./#donations')
-  a#ohloh(href='https://www.ohloh.net/p/camotics?ref=sample', target='_blank')
+  a#ohloh(href='//www.ohloh.net/p/camotics?ref=sample', target='_blank')
 
   .container
     .navbar-header
@@ -42,27 +42,31 @@ header.navbar.navbar-inverse.navbar-fixed-top.docs-nav(role='banner')
     != pages[page].titleText
     != pages[page].subtext
 
-.banner#announcement20170930
+.banner#announcement20180326
   img.banner-close(src='images/banner-close.png')
   .container
-    a(href="http://buildbotics.com/controller", target="_blank")
+    a(href="https://buildbotics.com/", target="_blank")
       img(style="float:left; margin-right:1em",
         src="/images/buildbotics_controller_front_right_lit-tiny.png")
 
-    a(href="https://www.instagram.com/buildbotics/")
-      img(style="float:right;margin-left:1em",
-        src="/images/social-1_logo-instagram-64.png")
+    //a(href="https://www.instagram.com/buildbotics/")
+    //  img(style="float:right;margin-left:1em",
+    //    src="/images/social-1_logo-instagram-64.png")
 
-    a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A//buildbotics.com/controller")
-      img(style="float:right;margin-left:1em",
-        src="/images/social-1_logo-facebook-64.png")
+    //a(href="https://www.facebook.com/sharer/sharer.php?u=https%3A//buildbotics.com/")
+    //  img(style="float:right;margin-left:1em",
+    //    src="/images/social-1_logo-facebook-64.png")
 
-    a(href="https://twitter.com/intent/tweet?text=Check out the Buildbotics CNC controller&url=http://buildbotics.com/controller")
-      img(style="float:right;margin-left:1em",
-        src="/images/social-1_logo-twitter-64.png")
+    //a(href="https://twitter.com/intent/tweet?text=Check out the Buildbotics CNC controller&url=https://buildbotics.com/")
+    //  img(style="float:right;margin-left:1em",
+    //    src="/images/social-1_logo-twitter-64.png")
 
-    a(href="http://buildbotics.com/controller", target="_blank")
-      div
-        | Find out about the Buildbotics CNC controller.
-        br
-        | Get one of the first production units.
+    div
+      a(href="https://buildbotics.com/", target="_blank")
+        | Truely amazing Open-Source CNC controller.
+      br
+      | 100% compatible with CAMotics.
+      br
+      a(href="https://store.buildbotics.com/buildbotics-cnc-controller/",
+        target="_blank")
+        | Available now at the Buildbotics store.

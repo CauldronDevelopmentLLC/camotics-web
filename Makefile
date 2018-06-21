@@ -1,6 +1,6 @@
 all: http
 
-http: $(shell find jade) config.json
+http: node_modules $(shell find jade) config.json
 	./build.sh
 
 clean:
@@ -8,3 +8,6 @@ clean:
 
 publish: http
 	rsync -Lav http/ root@camotics.org:/var/www/camotics.org/http/
+
+node_modules:
+	npm install
