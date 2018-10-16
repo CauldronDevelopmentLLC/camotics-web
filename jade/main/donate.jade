@@ -7,15 +7,16 @@ p
   | Your donations will make new features, bug fixes
   | and the continued development of this software possible.
 
-h3 Paypal
+h3 Make a One-time Donation
 p
-  | To make a <b>onetime</b> donation with Paypal click the graphic below:
+  | To make a <b>one-time</b> donation with Paypal click the graphic below:
 
   form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
     input(name="cmd" value="_s-xclick" type="hidden")
     input(name="hosted_button_id" value="FDP4SVEVT68NG" type="hidden")
     input.donate-button(src="images/donate.png" name="submit" type="image")
 
+h3 Make a Recurring Donation
 p
   | Want to really help this project?  Make a recurring donation:
 
@@ -24,9 +25,11 @@ p
     input(type="hidden" name="hosted_button_id" value="V8RMSHW39GTMY")
     input(type="hidden" name="currency_code" value="USD")
     select(name="os0")
-      option(value="Supporter" selected) Supporter : $5.00 USD - monthly
-      option(value="Generous") Generous : $10.00 USD - monthly
-      option(value="Philanthropist") Philanthropist : $25.00 USD - monthly
+      option(value="Advocate" selected) Advocate : $5.00 USD - monthly
+      option(value="Supporter" selected) Supporter : $10.00 USD - monthly
+      option(value="Generous") Generous : $25.00 USD - monthly
+      option(value="Philanthropist") Philanthropist : $50.00 USD - monthly
+      option(value="Boss") The Boss : $100.00 USD - monthly
     input(type="submit" name="submit" value="Make a recurring donation")
 
 h3 BitCoin
@@ -38,4 +41,3 @@ p
 p
   p 182aJsBrnmcWxqZ9VCACJyFYNWSH7eKS9R
   img(src="images/camotics-bitcoin-donations.gif")
-

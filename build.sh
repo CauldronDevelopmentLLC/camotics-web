@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/bash -e
 
-JADE="$(dirname "$0")"/node_modules/jade/bin/jade.js
+JADE="$(dirname "$0")"/node_modules/.bin/jade
+STYLUS="$(dirname "$0")"/node_modules/.bin/stylus
 
 declare -A PAGES
 
@@ -9,6 +10,13 @@ PAGES[main]+="legal contact"
 PAGES[download]="current install run source debug previous"
 PAGES[manual]="overview projects simulation layout playback nc-files tools "
 PAGES[manual]+="workpiece export docks toolbars"
+PAGES[gcode]="supported gcodes missing other"
+
+# Compile styles
+mkdir -p http/css
+for i in stylus/*.styl; do
+    $STYLUS $i -o http/css
+done
 
 # Create Menus
 for PAGE in ${!PAGES[@]}; do
@@ -34,6 +42,8 @@ done
 $JADE -P <jade/notfound.jade >http/notfound.html
 
 ln -sf main.html http/index.html
-ln -sf ../css ../js ../images http/
+for i in css/*.css js/*.js $(find images -type f); do
+  install -D $i http/$i
+done
 
 touch http

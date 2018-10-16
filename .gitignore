@@ -3,4 +3,7 @@ http
 */*/template.jade
 
 *~
+\#*
 
+/node_modules
+/package-lock.json

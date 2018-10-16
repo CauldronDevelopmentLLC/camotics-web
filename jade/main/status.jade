@@ -23,14 +23,16 @@ ul
     | shapes.
   li Tool path 3D visualization.
   li Multi-threaded rendering can take advantage of multi-processor CPUs.
-  li GCode parsing, simulation, verification and annotation.
-  li In application G-Code and <a href="tplang.org">TPL</a> view and edit.
+  li
+    | <a href="gcode.html">GCode</a> parsing, simulation, verification and
+    | annotation.
+  li In application GCode and <a href="tplang.org">TPL</a> view and edit.
   li Supports LinuxCNC (AKA EMC2) O-codes.
   li Export cut workpiece to STL file.
   li Tool table editing.
-  li Add height probing to 2D GCode files.  Very useful for circuit board
-    | cutting and metal engraving.
-  li 2D GCode path optimization. (in progress
+  li Add height probing to 2D <a href="gcode.html">GCode</a> files.  Very
+    | useful for circuit board cutting and metal engraving.
+  li 2D <a href="gcode.html">GCode</a> path optimization. (in progress
     +issue(11)
     | )
   li Operates in Windows and Linux.
@@ -51,40 +53,9 @@ ul
   li No CNC machine control, not a replacement for LinuxCNC or MACH3.
   li Does not yet detect over/under cutting, collisions with
     | the tool shaft or fixtures or rapid moves in the material.
-  li Not all of the LinuxCNC G-Code language is implemented, yet.  See below.
+  li Not all of the LinuxCNC <a href="gcode.html">GCode</a> language is
+    | implemented, yet.
 
-h2#missing-linuxcnc-codes Missing G-Codes
-p
-  | This section lists features of the
-  | <a href="http://linuxcnc.org/docs/2.5/html/gcode/overview.html">LinuxCNC
-  | G-Code language</a> which are not yet implemented in CAMotics:
-
-ul
-  li More than 3-axis movements. Issue
-    +issue(17)
-    | .
-  li Tool offset compensation. G41, G41.1, G42 & G42.1. Issue
-    +issue(15)
-    | .
-  li Plane rotation. G10 L2 R#. Issue
-    +issue(41)
-    | .
-  li Canned cycles. G73, G76, G81-G89. Issue
-    +issue(39)
-    | .
-  li Feed modes: inverse time, units per revolution. G93 & G95. Issue
-    +issue(40)
-    | . (Only important for estimating run time)
-  li Quadratic B-spline. G5.1. (Experimental in LinuxCNC)
-  li NURBS. G5.2 & G5.3. (Experimental in LinuxCNC)
-  li Spindle-synchronized motion. G33.
-  li Rigid Tapping. G33.1.
-
-p This list is probably incomplete.
-
-p
-  | See <a href='http://linuxcnc.org/docs/html/gcode/gcode.html'
-  | >http://linuxcnc.org/docs/html/gcode/gcode.html</a>
 
 h2#future-plans Future Plans
 p

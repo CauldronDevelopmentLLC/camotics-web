@@ -12,6 +12,10 @@
         manual: {
             titleText: "<h1>User's Manual</h1>",
             subtext: 'A guide to using CAMotics v0.2.5 or newer.',
+        },
+        gcode: {
+            titleText: "<h1>GCode Manual</h1>",
+            subtext: 'GCode supported by CAMotics.'
         }
     },
     version: '1.1.1',

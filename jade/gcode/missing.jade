@@ -1,0 +1,30 @@
+.page-header
+  h1#missing-linuxcnc-codes Missing G-Codes
+
+p
+  | This section lists features of the
+  | <a href="http://linuxcnc.org/docs/2.5/html/gcode/overview.html">LinuxCNC
+  | GCode language</a> which are not yet implemented in CAMotics:
+
+ul
+  li More than 3-axis movements. Issue
+    +issue(17)
+    | .
+  li Tool offset compensation. G41, G41.1, G42 & G42.1. Issue
+    +issue(15)
+    | .
+  li Plane rotation. G10 L2 R#. Issue
+    +issue(41)
+    | .
+  li Canned cycles. G73, G76, G81-G89. Issue
+    +issue(39)
+    | .
+  li Feed modes: inverse time, units per revolution. G93 & G95. Issue
+    +issue(40)
+    | . (Only important for estimating run time)
+  li Quadratic B-spline. G5.1. (Experimental in LinuxCNC)
+  li NURBS. G5.2 & G5.3. (Experimental in LinuxCNC)
+  li Spindle-synchronized motion. G33.
+  li Rigid Tapping. G33.1.
+
+p This list is probably incomplete.

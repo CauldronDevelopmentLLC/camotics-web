@@ -1,0 +1,115 @@
+.page-header
+  h1#gcodes Additional GCodes
+
+p This section describes extra GCodes not support by LinuxCNC.
+
+h2#gcodes-g28_2-28_3 G28.2, G28.3 (Un)set Axis Homed State
+pre: code
+  | G28.2 axes
+  | G28.3 axes
+
+p <code>G28.2</code> and <code>G28.3</code> are typically used as part of an
+  | axis homing procedure.
+
+p
+  | <code>G28.2</code> sets the specified axes unhomed.  By setting the global
+  | variables <code>_&lt;axis&gt;_homed</code> to zero.  The value specified
+  | in the axis variable is not used.  For example:
+
+pre: code
+  | G28.2 X0    (_x_homed = 0)
+
+p <code>G28.3</code> does four things for each axis specified:
+
+  ol
+    li Set the axis' absolute position to the value in the axis variable.
+    li Set the axis' global offset to zero.
+    li
+      | Mark the axes homed by setting the global variable
+      | <code>_&lt;axis&gt;_homed</code> to one.
+    li
+      | Save the new absolute position in the global variable
+      | <code>_&lt;axis&gt;_home</code>.
+
+p For example:
+
+pre: code
+  | G28.3 Y0 A0 (_y_homed & _a_homed = 1 and _y_home & _a_home = 0)
+
+p
+  | After seeking an axis' maximum position you would likely set a positive
+  | value for the absolute position.  For example:
+
+pre: code G28.3 X300 (_x_homed = 1 and _x_home = 300)
+
+p It is an error if:
+ul
+  li No axis is specified.
+
+h2#gcodes-g38_6-38_9 G38.6 - G38.9 Seek Switch
+pre: code
+  | G38.6 axis or G38.6 P- axes (Seek active switch with error)
+  | G38.7 axis or G38.7 P- axes (Seek active switch without error)
+  | G38.8 axis or G38.8 P- axes (Seek inactive switch with error)
+  | G38.9 axis or G38.9 P- axes (Seek inactive switch without error)
+
+p
+  | <code>G38.6</code> - <code>G38.9</code> execute a straight move at the
+  | current feedrate.  The move will halt or ramp down to a stop when the
+  | specified switch changes to the target state.  If the switch is already
+  | in the target state no move is made.  <code>G38.6</code> and
+  | <code>G38.8</code> will trigger an error if the move completes with out
+  | the switch reaching to the target state.  <code>G38.6</code> and
+  | <code>G38.7</code> seek an active switch whereas <code>G38.8</code> and
+  | <code>G38.9</code> seek an inactive switch.
+
+p
+  | These commands can be specified either with a single axis and relative
+  | position or with one or more axes with the target switch specified through
+  | the <code>P</code> parameter.
+
+p
+  | When only a single axis is specified the target switch is determined by the
+  | axis and travel direction.  If the travel direction is negative a min
+  | switch is sought otherwise a max switch.  For example, to seek the active
+  | X-min switch with error traveling no more than 100 units:
+
+pre: code G38.6 X-100
+
+p
+  | Arbitrary linear moves can be made by explicitly specifying a switch ID
+  | via the <code>P</code> variable.  Possible switch IDs are as follows:
+
+table
+  tr
+    th ID
+    th Switch
+    th ID
+    th Switch
+
+  each axis, index in 'XYZABCUVW'
+    tr
+      td= index * 2
+      td #{axis}-min
+      td= index * 2 + 1
+      td #{axis}-max
+
+  tr
+    td 18
+    td Probe
+
+p
+  | The following example seeks the inactive A-max switch without error while
+  | moving in both X and Y:
+
+pre: code G38.9 P7 X20 Y20
+
+p
+  | Whether such a move makes sense depends on the machine.  Some machines may
+  | support additional switch IDs.
+
+p It is an error if:
+ul
+  li No feed rate has been set.
+  li No axis is specified.
+  li More than one axis is specified with out <code>P</code>.
