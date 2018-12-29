@@ -47,11 +47,12 @@ script(src='js/shadowbox.js')
 script(src='js/main.js')
 
 // Google Analytics
+script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-57023811-1")
 script
-  | var id='UA-57023811-1';
-  | GoogleAnalyticsObject='ga';
-  | ga={'q':[['create',,'auto'],['send', 'pageview']],'l':1*new Date()};
-script(src='//www.google-analytics.com/analytics.js' async=1)
+  | window.dataLayer = window.dataLayer || [];
+  | function gtag(){dataLayer.push(arguments);}
+  | gtag('js', new Date());
+  | gtag('config', 'UA-57023811-1');
 
 // StatCounter
 script(type='text/javascript')

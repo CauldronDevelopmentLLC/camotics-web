@@ -98,14 +98,4 @@ $(function() {
       document.cookie = 'banner-close-' + bannerID + '=true; path=/';
     });
   });
-
-  // Google Analytics
-  GoogleAnalyticsObject = 'ga';
-  ga = {
-    'q': [['create', 'UA-57023811-1', 'auto'], ['send', 'pageview']],
-    'l': 1 * new Date()
-  };
-  $('<script>')
-    .attr({'src': '//www.google-analytics.com/analytics.js', 'async': 1})
-    .appendTo('head');
 });
