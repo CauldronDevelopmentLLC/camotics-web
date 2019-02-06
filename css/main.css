@@ -5603,7 +5603,7 @@ h3 {
   }
 }
 .banner {
-  font-size: 110%;
+  font-size: 140%;
   padding: 7px 20px;
   color: #444;
   background-color: #ffc;
@@ -5625,6 +5625,9 @@ h3 {
 }
 .banner strong {
   color: #555;
+}
+.banner a, .banner a:visited, .banner a:link {
+  color: #ff8800;
 }
 .btn-outline {
   color: #666666;
